@@ -1,6 +1,6 @@
 package com.github.ssw.validation;
 
-import static com.github.ssw.validation.ViolationUtil.violation;
+import static com.github.ssw.validation.ValidateUtil.violation;
 
 public enum GenderType {
     MALE("GD01"){

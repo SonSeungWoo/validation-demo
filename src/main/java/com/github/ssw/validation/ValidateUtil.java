@@ -10,7 +10,7 @@ import javax.validation.Validator;
 import java.util.Set;
 
 @UtilityClass
-public class ViolationUtil {
+public class ValidateUtil {
 
     private static final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
