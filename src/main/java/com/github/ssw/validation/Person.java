@@ -24,5 +24,8 @@ public class Person {
     private GenderType gender;
 
     @NotNull(groups = PersonGroup.Girl.class)
-    private Integer juminNo;
+    private Integer jumin;
+
+    @NotNull(groups = PersonGroup.Man.class)
+    private JobType job;
 }
