@@ -5,14 +5,14 @@ import static com.github.ssw.validation.ValidateUtil.violation;
 public enum GenderType {
     MALE("GD01"){
         @Override
-        public void typeCheck(Person person) {
+        public void validCheck(Person person) {
             violation(person, PersonGroup.Man.class);
         }
     },
 
     FEMALE("GD02"){
         @Override
-        public void typeCheck(Person person) {
+        public void validCheck(Person person) {
             violation(person, PersonGroup.Girl.class);
         }
     };
@@ -27,5 +27,5 @@ public enum GenderType {
         return code;
     }
 
-    public abstract void typeCheck(Person person);
+    public abstract void validCheck(Person person);
 }

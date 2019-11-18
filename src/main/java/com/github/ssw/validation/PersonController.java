@@ -11,9 +11,10 @@ import javax.validation.Valid;
 @RestController
 public class PersonController {
 
+
     @PostMapping("/validate")
     public void validateTest(@Valid @RequestBody Person person){
-        person.getGender().typeCheck(person);
+        person.getGender().validCheck(person);
         log.info("person : {}", person);
     }
 }
