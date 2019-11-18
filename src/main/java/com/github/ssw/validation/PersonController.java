@@ -13,8 +13,7 @@ public class PersonController {
 
     @PostMapping("/validate")
     public void validateTest(@Valid @RequestBody Person person){
-        GenderType genderType = person.getGender();
-        genderType.typeCheck(person);
+        person.getGender().typeCheck(person);
         log.info("person : {}", person);
     }
 }
