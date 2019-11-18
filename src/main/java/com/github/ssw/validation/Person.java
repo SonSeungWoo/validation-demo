@@ -12,12 +12,15 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class Person {
 
+    @NotBlank
     private String firstName;
 
+    @NotBlank
     private String lastName;
 
     private int age;
 
+    @NotNull
     private GenderType gender;
 
     @NotNull(groups = PersonGroup.Girl.class)

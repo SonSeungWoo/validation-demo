@@ -1,8 +1,21 @@
 package com.github.ssw.validation;
 
+import static com.github.ssw.validation.ViolationUtil.violation;
+
 public enum GenderType {
-    MALE("GD01"),
-    FEMALE("GD02");
+    MALE("GD01"){
+        @Override
+        public void typeCheck(Person person) {
+            violation(person, PersonGroup.Man.class);
+        }
+    },
+
+    FEMALE("GD02"){
+        @Override
+        public void typeCheck(Person person) {
+            violation(person, PersonGroup.Girl.class);
+        }
+    };
 
     private final String code;
 
@@ -13,4 +26,6 @@ public enum GenderType {
     public String getCode(){
         return code;
     }
+
+    public abstract void typeCheck(Person person);
 }
