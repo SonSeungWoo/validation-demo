@@ -1,7 +1,9 @@
 package com.github.ssw.validation;
 
-public interface PersonGroup {
-    interface Man{}
+import javax.validation.groups.Default;
 
-    interface Girl{}
+public interface PersonGroup {
+    interface Man extends Default {}
+
+    interface Girl extends Default {}
 }
