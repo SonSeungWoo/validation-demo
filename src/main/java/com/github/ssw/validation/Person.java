@@ -26,6 +26,10 @@ public class Person {
     @NotNull(groups = PersonGroup.Girl.class)
     private Integer jumin;
 
-    @NotNull(groups = PersonGroup.Man.class)
-    private JobType job;
+    //@ValueOfEnum(enumClass = JobType.class)
+    @NotNull(groups = {PersonGroup.Man.class, PersonGroup.Girl.class})
+    private String job;
+
+    @EnumSubset(anyOf = {JobType.CITIZEN, JobType.SOLDIER})
+    private JobType job2;
 }
